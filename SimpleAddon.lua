@@ -16,8 +16,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Server_section = shared.AddSection("Force Kick | #1")
 local Server_section = shared.AddSection("Mute Gun| #2")
 local RTX_section = shared.AddSection("RTX| #3")
-local speed_glitch_section = shared.AddSection("Auto Speed Glitch| #4")
-local Minecraftizer = shared.AddSection("Minecraftizer| #5")
+local speed_glitch_section = shares.AddSection("Auto Speed Glitch")
+local Minecraftizer = shared.AddSection("Minecraftizer")
 
 Minecraftizer:AddLabel("<b><font color='#FFD700'>Credits:</font></b> not_.drei", true)
 
