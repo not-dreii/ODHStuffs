@@ -185,7 +185,7 @@ Minecraftizer:AddKeybind("Apply Materials Keybind", "O", function()
 end)
 
 other_section:AddButton("Force Kick", function() game:Shutdown() end)
-other_section:AddButton("Mute Gun", function()
+other_section:AddButton("Mute Gun Sounds", function()
     local Players = game:GetService("Players")
     local player = Players.LocalPlayer
 
