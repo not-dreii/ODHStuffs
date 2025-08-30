@@ -15,7 +15,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Server_section = shared.AddSection("Force Kick | #1")
 local Server_section = shared.AddSection("Mute Gun| #2")
-local RTX_section = shared.AddSection("RTX| #3")
+local RTX_section = shared.AddSection("RTX")
 local Minecraftizer = shared.AddSection("Minecraftizer")
 local speed_glitch_section = shared.AddSection("Auto Speed Glitch")
 local other_section = shared.AddSection("Other | #8")
@@ -89,7 +89,7 @@ RunService.Stepped:Connect(function()
     end
 end)
 
-Minecraftizer:AddLabel("<b><font color='#FFD700'>Credits:</font></b> not_.drei", true)
+Minecraftizer:AddLabel("<b><font color='#FFD700'>Credits:</font></b> not_.gato", true)
 
 local materialTextures = {
     [Enum.Material.Asphalt] = "rbxassetid://10777285622",
