@@ -2,23 +2,11 @@
 
 local shared = odh_shared_plugins
 local Players = game:GetService("Players")
-local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local TextChatService = game:GetService("TextChatService")
-local HttpService = game:GetService("HttpService")
-local TeleportService = game:GetService("TeleportService")
-local Lighting = game:GetService("Lighting")
-local InsertService = game:GetService("InsertService")
 local LocalPlayer = Players.LocalPlayer
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Server_section = shared.AddSection("Force Kick | #1")
-local Server_section = shared.AddSection("Mute Gun| #2")
-local RTX_section = shared.AddSection("RTX")
-local Minecraftizer = shared.AddSection("Minecraftizer")
 local speed_glitch_section = shared.AddSection("Auto Speed Glitch")
-local other_section = shared.AddSection("Other | #8")
 
 local speed_glitch_enabled = false
 local horizontal_only = false
@@ -59,7 +47,7 @@ speed_glitch_section:AddToggle("Sideways Only", function(enabled)
     horizontal_only = enabled
 end)
 
-speed_glitch_section:AddSlider("Speed (0Ã¢â‚¬â€œ128)", 0, 128, 0, function(value)
+speed_glitch_section:AddSlider("Speed (0–255)", 0, 255, 0, function(value)
     speed_slider_value = value
 end)
 
@@ -88,6 +76,16 @@ RunService.Stepped:Connect(function()
         humanoid.WalkSpeed = default_speed
     end
 end)
+
+-- Rate: Featured
+-- Made By: not_.gato
+-- Special ID: tYbVq_01
+-- Name: Minecraftizer
+-- Description: Minecrafts Your Game :content:
+
+local shared = odh_shared_plugins
+
+local Minecraftizer = shared.AddSection("Minecraftizer")
 
 Minecraftizer:AddLabel("<b><font color='#FFD700'>Credits:</font></b> not_.gato", true)
 
@@ -185,33 +183,12 @@ Minecraftizer:AddKeybind("Apply Materials Keybind", "O", function()
     shared.Notify("Material textures applied via keybind!", 3)
 end)
 
-other_section:AddButton("Force Kick", function() game:Shutdown() end)
-other_section:AddButton("Mute Gun Sounds", function()
-    local Players = game:GetService("Players")
-    local player = Players.LocalPlayer
+Section:AddParagraph(
+    "Credits: not_gato"
+)
 
-    task.spawn(function()
-        while task.wait(1) do
-            local char = player.Character or player.CharacterAdded:Wait()
-            local gun = char:FindFirstChild("Gun")
-
-            if gun then
-                local handle = gun:FindFirstChild("Handle")
-                if handle then
-                    local reload = handle:FindFirstChild("Reload")
-                    if reload and reload:IsA("Sound") then
-                        reload.Volume = 0
-                    end
-
-                    local gunshot = handle:FindFirstChild("Gunshot")
-                    if gunshot and gunshot:IsA("Sound") then
-                        gunshot.Volume = 0
-                    end
-                end
-            end
-        end
-    end)
-end)
-
-warn("[#]: Loaded")
--- UPDATED!
+local shared = odh_shared_plugins
+local RTX_section = shared.AddSection("RTX")
+Section:AddParagraph(
+    "SOON!!!"
+)
