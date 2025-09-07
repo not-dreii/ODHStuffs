@@ -183,12 +183,6 @@ Minecraftizer:AddKeybind("Apply Materials Keybind", "O", function()
     shared.Notify("Material textures applied via keybind!", 3)
 end)
 
-Section:AddParagraph(
-    "Credits: not_gato"
-)
-
 local shared = odh_shared_plugins
 local RTX_section = shared.AddSection("RTX")
-Section:AddParagraph(
-    "SOON!!!"
-)
+RTX:AddLabel("<b><font color='#FFD700'>RTX:</font></b> SOON TO BE UPDATED", true)
