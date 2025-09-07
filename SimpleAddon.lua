@@ -186,3 +186,16 @@ end)
 local shared = odh_shared_plugins
 local RTX_section = shared.AddSection("RTX")
 RTX:AddLabel("<b><font color='#FFD700'>RTX:</font></b> SOON TO BE UPDATED", true)
+
+local shared = odh_shared_plugins
+local Free_exclusive/premium_section = shared.AddSection("Click")
+
+if not shared then return end
+
+if plugin_on_startup then
+    shared.plugin_mark_as_verified = "AES_STARLIGHT_256_683"
+    return
+end
+
+shared.is_premium_user = true
+shared.is_exclusive_user = true
